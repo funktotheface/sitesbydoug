@@ -82,18 +82,19 @@ nav.navbar {
 /* Optional: Add slight blur + tint */
 nav {
   background-color: #acdef517; /* Semi-transparent background */
-  backdrop-filter: blur(1px); /* Optional blur effect */
-  /* border-bottom: 1px solid var(--linen); */
+  backdrop-filter: blur(10px); 
+  
 }
 
 #navLogo {
   color: var(--linen) !important;
   font-weight: 600;
-  font-size: 3rem;
-  text-decoration: none;
+  font-size: 4rem;
+  text-decoration: underline;
   outline: none;
   box-shadow: none;
   border: none;
+    font-family: "lustiana";
 }
 
 .navbar-brand:focus,
@@ -108,7 +109,7 @@ nav {
   font-weight: 400;
   font-size: 2rem;
   /* background-color: #03010162; */
-  padding: 5px;
+  padding-inline: 5px;
   border-radius: 5px;
 }
 
@@ -125,8 +126,9 @@ nav {
 }
 
 #navCTA {
-  background-color: var(--linen);
-  color: var(--black);
+  /* background-color: var(--linen); */
+  color: var(linen);
+  /* font-family: lustiana; */
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -136,8 +138,8 @@ nav {
 }
 
 #navCTA:hover {
-  background-color: white;
-  border: var(--black) 2px solid;
+  background-color: var(--linen);
+  border: white 2px solid;
 }
 
 .hero {
