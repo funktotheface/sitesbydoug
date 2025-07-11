@@ -67,6 +67,12 @@
   src: url("Fonts/coolvetica/Coolvetica Rg.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "lustiana";
+    src: url("Fonts/lustiana/Lustiana-Regular.otf") format("opentype");
+
+}
+
 /* Make sure the navbar sits on top of hero image */
 nav.navbar {
   z-index: 2;
@@ -80,8 +86,8 @@ nav {
   /* border-bottom: 1px solid var(--linen); */
 }
 
-.navbar-brand {
-  color: var(--linen);
+#navLogo {
+  color: var(--linen) !important;
   font-weight: 600;
   font-size: 3rem;
   text-decoration: none;
@@ -99,7 +105,7 @@ nav {
 
 .nav-link {
   color: var(--linen);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 2rem;
   /* background-color: #03010162; */
   padding: 5px;
@@ -161,11 +167,12 @@ nav {
   color: var(--black);
   text-align: left;
   padding-left: 4%;
-  text-shadow: 2px 2px 5px hsla(0, 0%, 43%, 0.836);
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+
 }
 
 .hero-text h1 {
-  font-family: "coolvetica";
+  font-family: "lustiana";
   font-size: 6rem;
   color: var(--linen);
   /* text-shadow: 0px 3px 0px hsla(32, 70%, 75%, 0.836); */
