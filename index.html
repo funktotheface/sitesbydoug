@@ -1,91 +1,145 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    </head>
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <body>
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100 px-4">
-    <div class="container-fluid d-flex align-items-center position-relative">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
 
-      <!-- Logo (left) -->
-      <a id="navLogo" class="navbar-brand me-3" href="#">s i t e s b y d o u g</a>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100 px-4">
+      <div class="container-fluid d-flex align-items-center position-relative">
 
-      <!-- Toggle button for mobile -->
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <!-- Logo (left) -->
+        <a id="navLogo" class="navbar-brand me-3" href="#">s i t e s b y d o u g</a>
 
-      <!-- Centered nav links and right CTA -->
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <!-- Toggle button for mobile -->
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <!-- Nav Links (centered) -->
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item mx-3">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item mx-3">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item mx-3">
-            <a class="nav-link" href="#">Projects</a>
-          </li>
-        </ul>
+        <!-- Centered nav links and right CTA -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
 
-        <!-- CTA Button (right) -->
-        <a id="navCTA" href="#" class="btn btn-outline-light ms-lg-auto d-none d-lg-block">Let's Talk</a>
+          <!-- Nav Links (centered) -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-3">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">Projects</a>
+            </li>
+          </ul>
+
+          <!-- CTA Button (right) -->
+          <a id="navCTA" href="#" class="btn btn-outline-light ms-lg-auto d-none d-lg-block">Let's Talk</a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+
+
+
+  <!-- ───── Hero Section ───── -->
+  <section class="hero">
+
+    <!-- Full‑bleed background image lives in CSS -->
+    <div class="hero-overlay"><!-- you can add overlay effects here --></div>
+
+    <!-- Left column -->
+    <div class="side side-left">
+      <div class="slot slot-1"></div>
+      <div class="slot slot-2">
+        <h1>Did Someone Say <br>Website?</h1>
+      </div>
+      <div class="slot slot-3"><button type="button" id="heroButton" class="btn">CTA CTA CTA</button></div>
+    </div>
+
+    <!-- Right column -->
+    <div class="side side-right">
+      <div class="slot slot-1">
+        <!-- <h2>Get In Touch</h2> -->
+      </div>
+      <div class="slot slot-2">
+        <div id="heroForm" class="contactForm">
+           <h2>Get In Touch</h2>
+          <div class="mb-3">
+            <label for="" class="form-label">Name</label>
+            <input type="text" class="form-control" name="" id="" aria-describedby="nameHelpId"
+              placeholder="Your Name" />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Email</label>
+            <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId"
+              placeholder="abc@mail.com" />
+            
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Contact Number</label>
+            <input type="tel" class="form-control" name="" id="" aria-describedby="phoneHelpId"
+              placeholder="123-456-7890" />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Message</label>
+            <textarea class="form-control" name="" id="" rows="3" placeholder="Your message here..."></textarea>
+
+          </div>
+
+          <button type="submit" class="formSubmit btn">Submit</button>
+        </div>
+
+      </div>
+      <div class="slot slot-3"></div>
+    </div>
+
+  </section>
+
+
+
+
+  <!-- 
+    <section class="hero">
+      <img id="heroImage" src="Assets/Media/Images/dog2.png" alt="">
+      <div class="hero-text">
+        <h1>Did somebody say<br> Website?</h1>
+                      <div id="heroButton">
+          <a id="navCTA" href="#" class="btn btn-outline-light ms-lg-auto d-none d-lg-block">Let's Get Started</a>
+        </div>
       </div>
 
-    </div>
-  </nav>
-</header>
+
+    </section> -->
 
 
-        <main>
-            
-             <section class="hero">
-                <img id="heroImage" src="Assets/Media/Images/dog2.png" alt="">
-                <div class="hero-text">
-                    <h1>Did somebody say<br> Website?</h1>
-                </div>
-            </section>
-            
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
 
-        </main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
 </html>

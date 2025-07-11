@@ -68,9 +68,8 @@
 }
 
 @font-face {
-    font-family: "lustiana";
-    src: url("Fonts/lustiana/Lustiana-Regular.otf") format("opentype");
-
+  font-family: "lustiana";
+  src: url("Fonts/lustiana/Lustiana-Regular.otf") format("opentype");
 }
 
 /* Make sure the navbar sits on top of hero image */
@@ -82,8 +81,7 @@ nav.navbar {
 /* Optional: Add slight blur + tint */
 nav {
   background-color: #acdef517; /* Semi-transparent background */
-  backdrop-filter: blur(10px); 
-  
+  backdrop-filter: blur(10px);
 }
 
 #navLogo {
@@ -94,7 +92,7 @@ nav {
   outline: none;
   box-shadow: none;
   border: none;
-    font-family: "lustiana";
+  font-family: "lustiana";
 }
 
 .navbar-brand:focus,
@@ -164,6 +162,9 @@ nav {
 }
 
 .hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   position: relative;
   z-index: 1;
   color: var(--black);
@@ -172,14 +173,34 @@ nav {
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
   top: 40%;
   transform: translateY(-50%);
-
+  
 }
 
 .hero-text h1 {
+margin-top: 5rem;
   font-family: "coolvetica", sans-serif;
   font-size: 6rem;
   color: var(--linen);
+  margin-bottom: 5rem;
   /* text-shadow: 0px 3px 0px hsla(32, 70%, 75%, 0.836); */
+}
+
+#heroButton {
+  align-self: center;
+  position: relative;
+  z-index: 1;
+
+}
+
+#heroButton a {
+  color: var(--black);
+  font-family: "Quicksand", sans-serif;
+  font-size: 2rem;
+  background-color: var(--linen);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Make font responsive */
@@ -217,4 +238,3 @@ nav {
     padding: 0;
   }
 }
-

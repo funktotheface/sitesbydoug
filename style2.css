@@ -1,0 +1,315 @@
+:root {
+  /* Solid Colors */
+  --uranian-blue: #acdef5;
+  --linen: #efe8e0;
+  --black: #030101;
+
+  /* Gradients */
+  --gradient-top: linear-gradient(
+    0deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+  --gradient-right: linear-gradient(
+    90deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+  --gradient-bottom: linear-gradient(
+    180deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+  --gradient-left: linear-gradient(
+    270deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+
+  --gradient-top-right: linear-gradient(
+    45deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+  --gradient-bottom-right: linear-gradient(
+    135deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+  --gradient-top-left: linear-gradient(
+    225deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+  --gradient-bottom-left: linear-gradient(
+    315deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+
+  --gradient-radial: radial-gradient(
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+}
+
+@font-face {
+  font-family: "coolvetica";
+  src: url("Fonts/coolvetica/Coolvetica Rg.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "lustiana";
+  src: url("Fonts/lustiana/Lustiana-Regular.otf") format("opentype");
+}
+
+/* Make sure the navbar sits on top of hero image */
+nav.navbar {
+  z-index: 2;
+  font-family: "Quicksand", sans-serif; /* Use a modern sans-serif font */
+}
+
+/* Optional: Add slight blur + tint */
+nav {
+  background-color: #acdef517; /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+}
+
+#navLogo {
+  color: var(--linen) !important;
+  font-weight: 600;
+  font-size: 4rem;
+  text-decoration: underline;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  font-family: "lustiana";
+}
+
+.navbar-brand:focus,
+.navbar-brand:active {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.nav-link {
+  color: var(--linen);
+  font-weight: 400;
+  font-size: 1.2rem;
+  /* background-color: #03010162; */
+  padding-inline: 5px;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  color: white;
+  /* text-decoration: underline; */
+  transition: color 0.3s ease;
+}
+
+#navbarNav .active {
+  color: white;
+  text-decoration: underline;
+  /* font-size: 2.2rem; */
+}
+
+#navCTA,
+#heroButton {
+  /* background-color: var(--linen); */
+  color: var(--linen);
+  font-family: quicksand, sans-serif;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: var(--linen) solid;
+  transition: background-color 0.5s ease;
+  transition: border 0.5s ease;
+}
+
+#navCTA:hover,
+#heroButton:hover {
+  background-color: var(--linen);
+  border: white 2px solid;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* 1. Basic reset for consistent sizing */
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Hero wrapper fills the viewport */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* allows hero to grow taller if needed */
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between; /* left + right columns */
+}
+
+/* 3. Background image (swap the URL) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("Assets/Media/Images/dog2.png") center / cover no-repeat;
+  z-index: -2; /* keeps it behind everything */
+}
+
+/* 4. Optional dim / colour overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0); /* set your own overlay colour / opacity */
+  z-index: -1;
+}
+
+/* 5. Side columns */
+.side {
+  flex: 0 0 50%; /* each side ~30 % width on desktop */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* three slots spaced vertically */
+  padding: 2rem;
+}
+
+/* 6. Individual slots (blank for now) */
+.slot {
+  flex: 1 1 0; /* equal heights */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Add min‑height / padding / borders etc. when you customise */
+}
+
+.side-left .slot-2 h1 {
+  padding-top: 3rem;
+  font-family: "coolvetica", sans-serif;
+  font-size: 6rem;
+  color: var(--linen);
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  /* text-decoration: underline; */
+}
+
+.side-right .slot-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.side-right .slot-2 #heroForm {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 10px;
+  /* background-color: #efe8e02d; */
+}
+
+#heroForm {
+  width: 100%;
+  max-width: 600px; /* limit width on larger screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#heroForm h2 {
+  font-family: "quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--linen);
+  
+}
+
+
+#heroForm label {
+  color: var(--linen);
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+#heroForm input,
+#heroForm textarea,
+#heroForm select {
+  width: 20rem;
+  /* padding: 0.5rem; */
+  margin-bottom: 1rem;
+  border: 1px solid var(--linen);
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--linen);
+  font-size: 1.2rem;
+}
+
+#heroForm input::placeholder,
+#heroForm textarea::placeholder,
+#heroForm select::placeholder {
+  color: rgba(239, 232, 224, 0.6); /* faded version of --linen */
+  font-style: italic; /* optional */
+}
+
+.formSubmit {
+  color: var(--linen);
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: var(--linen) solid;
+  transition: background-color 0.5s ease;
+  transition: border 0.5s ease;
+}
+
+.formSubmit:hover {
+  background-color: var(--linen);
+  border: white 2px solid;
+}
+
+/* 7. Mobile layout (≤ 768 px) – stacks columns */
+@media (max-width: 768px) {
+  #navLogo {
+    font-size: 2rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .side {
+    flex: 1 1 0;
+    padding: 1rem;
+  }
+
+  /* Optional: stack slots tighter on mobile */
+  .slot + .slot {
+    margin-top: 1rem;
+  }
+
+  #heroForm {
+    display: none !important; /* Hide form on mobile */
+  }
+}
