@@ -29,14 +29,14 @@ nav.navbar {
 /* Optional: Add slight blur + tint */
 nav {
     background-color: #acdef517; /* Semi-transparent background */
-  backdrop-filter: blur(2px); /* Optional blur effect */
+  backdrop-filter: blur(1px); /* Optional blur effect */
   /* border-bottom: 1px solid var(--linen); */
 }
 
 .navbar-brand {
 
   color: var(--linen);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 3rem;
   text-decoration: none;
     outline: none;
