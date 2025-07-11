@@ -18,6 +18,11 @@
   --gradient-radial: radial-gradient(var(--uranian-blue), var(--linen), var(--black));
 }
 
+@font-face {
+  font-family: 'coolvetica';
+  src: url('fonts/coolvetica/Coolvetica\ Rg.otf') format('truetype');
+}
+
 /* Make sure the navbar sits on top of hero image */
 nav.navbar {
   z-index: 2;
