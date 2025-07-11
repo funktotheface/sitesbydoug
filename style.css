@@ -128,7 +128,7 @@ nav {
 }
 
 .hero-text h1 {
-  font-family: 'coolvetica', sans-serif;
+  font-family: 'coolvetica';
   font-size: 6rem;
   color: var(--linen);
     /* text-shadow: 0px 3px 0px hsla(32, 70%, 75%, 0.836); */
