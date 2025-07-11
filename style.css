@@ -182,7 +182,7 @@ nav {
   .hero-text {
     padding: 0;
     max-width: 90vw; /* Prevent it getting too wide */
-    width: 100%;
+    margin-left: -1rem;
   }
 
   .hero-text h1 {
@@ -190,7 +190,7 @@ nav {
     margin: 0;
     background-color: #efe8e017;
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 10px;
     width: fit-content; /* Only wraps content width */
   }
 
