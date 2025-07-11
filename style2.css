@@ -200,12 +200,12 @@ body {
 }
 
 .side-left .slot-2 h1 {
-  padding-top: 3rem;
+  /* padding-top: 3rem; */
   font-family: "coolvetica", sans-serif;
   font-size: 6rem;
   color: var(--linen);
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
-  /* text-decoration: underline; */
+  padding-bottom: 4rem;
 }
 
 .side-right .slot-2 {
@@ -213,7 +213,7 @@ body {
   flex-direction: column;
   align-items: end;
   justify-content: center;
-  padding: 1rem;
+  /* padding: 1rem; */
   width: 100%;
 }
 
@@ -290,6 +290,10 @@ body {
 
 /* 7. Mobile layout (≤ 768 px) – stacks columns */
 @media (max-width: 768px) {
+
+    .mobile-break {
+    display: none; /* Hide on larger screens */
+    }
   #navLogo {
     font-size: 2rem;
   }
@@ -297,6 +301,11 @@ body {
   .hero {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .side-left .slot-2 h1 {
+    padding-top: 70%; /* Adjust padding for mobile */
+    padding-bottom:0%;
   }
 
   .side {
