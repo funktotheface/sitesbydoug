@@ -20,7 +20,8 @@
 
 @font-face {
   font-family: 'coolvetica';
-  src: url('fonts/coolvetica/Coolvetica\ Rg.otf') format('truetype');
+  src: url('./fonts/coolvetica/Coolvetica Rg.otf') format('opentype');
+
 }
 
 /* Make sure the navbar sits on top of hero image */
