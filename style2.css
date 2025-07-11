@@ -124,22 +124,26 @@ nav {
 }
 
 #navCTA,
-#heroButton {
+#heroButton,
+#formSubmit {
   /* background-color: var(--linen); */
   color: var(--linen);
   font-family: quicksand, sans-serif;
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  border: var(--linen) solid;
+  border: var(--linen) 1px solid;
   transition: background-color 0.5s ease;
   transition: border 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 #navCTA:hover,
-#heroButton:hover {
+#heroButton:hover,
+#formSubmit:hover {
   background-color: var(--linen);
-  border: white 2px solid;
+  border: white 1px solid;
+  color: var(--black);
 }
 
 body {
@@ -272,21 +276,7 @@ body {
   font-style: italic; /* optional */
 }
 
-.formSubmit {
-  color: var(--linen);
-  font-family: "Quicksand", sans-serif;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  border: var(--linen) solid;
-  transition: background-color 0.5s ease;
-  transition: border 0.5s ease;
-}
 
-.formSubmit:hover {
-  background-color: var(--linen);
-  border: white 2px solid;
-}
 
 /* 7. Mobile layout (≤ 768 px) – stacks columns */
 @media (max-width: 768px) {
