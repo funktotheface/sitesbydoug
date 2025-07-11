@@ -148,7 +148,7 @@ nav {
   height: 100vh;
   background: var(--gradient-top);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   overflow: hidden;
 }
@@ -170,11 +170,13 @@ nav {
   text-align: left;
   padding-left: 4%;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  top: 40%;
+  transform: translateY(-50%);
 
 }
 
 .hero-text h1 {
-  font-family: "lustiana";
+  font-family: "coolvetica", sans-serif;
   font-size: 6rem;
   color: var(--linen);
   /* text-shadow: 0px 3px 0px hsla(32, 70%, 75%, 0.836); */
@@ -192,6 +194,8 @@ nav {
     padding: 0;
     max-width: 90vw; /* Prevent it getting too wide */
     margin-left: -1rem;
+    top: 0; /* Reset top position */
+    transform: none; /* Reset transform */
   }
 
   .hero-text h1 {
