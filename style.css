@@ -5,53 +5,90 @@
   --black: #030101;
 
   /* Gradients */
-  --gradient-top: linear-gradient(0deg, var(--uranian-blue), var(--linen), var(--black));
-  --gradient-right: linear-gradient(90deg, var(--uranian-blue), var(--linen), var(--black));
-  --gradient-bottom: linear-gradient(180deg, var(--uranian-blue), var(--linen), var(--black));
-  --gradient-left: linear-gradient(270deg, var(--uranian-blue), var(--linen), var(--black));
+  --gradient-top: linear-gradient(
+    0deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+  --gradient-right: linear-gradient(
+    90deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+  --gradient-bottom: linear-gradient(
+    180deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+  --gradient-left: linear-gradient(
+    270deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
 
-  --gradient-top-right: linear-gradient(45deg, var(--uranian-blue), var(--linen), var(--black));
-  --gradient-bottom-right: linear-gradient(135deg, var(--uranian-blue), var(--linen), var(--black));
-  --gradient-top-left: linear-gradient(225deg, var(--uranian-blue), var(--linen), var(--black));
-  --gradient-bottom-left: linear-gradient(315deg, var(--uranian-blue), var(--linen), var(--black));
-  
-  --gradient-radial: radial-gradient(var(--uranian-blue), var(--linen), var(--black));
+  --gradient-top-right: linear-gradient(
+    45deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+  --gradient-bottom-right: linear-gradient(
+    135deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+  --gradient-top-left: linear-gradient(
+    225deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+  --gradient-bottom-left: linear-gradient(
+    315deg,
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
+
+  --gradient-radial: radial-gradient(
+    var(--uranian-blue),
+    var(--linen),
+    var(--black)
+  );
 }
 
 @font-face {
-  font-family: 'coolvetica';
-  src: url('Fonts/coolvetica/Coolvetica Rg.otf') format('opentype');
-
+  font-family: "coolvetica";
+  src: url("Fonts/coolvetica/Coolvetica Rg.otf") format("opentype");
 }
 
 /* Make sure the navbar sits on top of hero image */
 nav.navbar {
   z-index: 2;
-  font-family: 'Quicksand', sans-serif; /* Use a modern sans-serif font */
-  
-  
+  font-family: "Quicksand", sans-serif; /* Use a modern sans-serif font */
 }
 
 /* Optional: Add slight blur + tint */
 nav {
-    background-color: #acdef517; /* Semi-transparent background */
+  background-color: #acdef517; /* Semi-transparent background */
   backdrop-filter: blur(1px); /* Optional blur effect */
   /* border-bottom: 1px solid var(--linen); */
 }
 
 .navbar-brand {
-
   color: var(--linen);
   font-weight: 600;
   font-size: 3rem;
   text-decoration: none;
-    outline: none;
+  outline: none;
   box-shadow: none;
   border: none;
-    
 }
-
-
 
 .navbar-brand:focus,
 .navbar-brand:active {
@@ -61,14 +98,12 @@ nav {
 }
 
 .nav-link {
-
   color: var(--linen);
   font-weight: 300;
   font-size: 2rem;
   /* background-color: #03010162; */
   padding: 5px;
-    border-radius: 5px;
- 
+  border-radius: 5px;
 }
 
 .nav-link:hover {
@@ -84,7 +119,7 @@ nav {
 }
 
 #navCTA {
-    background-color: var(--linen);
+  background-color: var(--linen);
   color: var(--black);
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
@@ -130,41 +165,43 @@ nav {
 }
 
 .hero-text h1 {
-  font-family: 'coolvetica';
+  font-family: "coolvetica";
   font-size: 6rem;
   color: var(--linen);
-    /* text-shadow: 0px 3px 0px hsla(32, 70%, 75%, 0.836); */
+  /* text-shadow: 0px 3px 0px hsla(32, 70%, 75%, 0.836); */
 }
 
 /* Make font responsive */
 @media (max-width: 768px) {
+  .hero {
+    align-items: center; /* Vertically center */
+    justify-content: flex-start; /* Left-align content */
+    padding: 0 5%; /* Optional horizontal breathing room */
+  }
 
-    .hero-text {
-        padding-left: 0px;
-        max-width: 60vw;
-    }
+  .hero-text {
+    padding: 0;
+    max-width: 90vw; /* Prevent it getting too wide */
+    width: 100%;
+  }
+
   .hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 150%;
+    font-size: 2.5rem;
+    margin: 0;
     background-color: #efe8e017;
-    padding-left: 20px;
-   
-    
-    
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: fit-content; /* Only wraps content width */
   }
 
   .navbar-brand {
     font-size: 1.5rem;
-
   }
 
-    .nav-link {
-        font-size: 1.2rem;
-        text-align: left;
-        padding: 0;
-    }
-.hero {
-    align-items:flex-end;
-}
+  .nav-link {
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 0;
+  }
 }
 
