@@ -250,8 +250,8 @@ body {
 
 
 #heroButton{
-  background-color: var(--linen);
-  color: var(--black);
+  /* background-color: var(--linen); */
+  color: var(--linen);
   font-family: quicksand, sans-serif;
   font-size: 3rem;
   padding: 0.5rem 1rem;
@@ -345,24 +345,37 @@ body {
 }
 
 .content1 .side-left .slot-1 h1 {
-  /* padding-top: 3rem; */
+  
   font-family: "coolvetica", sans-serif;
-  text-align: center;
+  text-align: right;
   font-size: 7rem;
   color: var(--linen);
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
-  /* padding-top: 125px; */
+  padding-top: 3rem;
   padding-left: 5rem;
 }
 
-.content1 .side-left .slot-3 p {
+.content1 .side-left .slot-2 {
+  justify-content: center;
+}
+
+.content1 .side-left .slot-2 p {
   font-family: quicksand, sans-serif;
-  text-align: center;
+  text-align: right;
   font-size: 1.5rem;
   color: var(--linen);
   text-decoration: none;
-  padding-bottom: 125px;
+  /* padding-bottom: 125px; */
   
+}
+
+.content1 .side-left .slot-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
+
 }
 
 .content1::before {

@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
   .from(".hero-subheading", {   // assuming your p has class "hero-subheading"
     // x: 500,
     opacity: 0,
-    duration: 3,
+    duration: 1,
     ease: "back.out(1)",
     // delay: 0.3,
 
-  },"-=0") // starts this animation 1.5 seconds before the previous one ends;
+  },"-=0.") // starts this animation 1.5 seconds before the previous one ends;
 });
