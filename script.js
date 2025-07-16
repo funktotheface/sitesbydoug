@@ -27,15 +27,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const tl = gsap.timeline();
 
   tl.from(".hero-heading", {
-    x: -500,
-    opacity: 0,
-    duration: 2,
-    ease: "back.out(1)",
-  })
-  .from(".hero-subheading", {   // assuming your p has class "hero-subheading"
     // x: -500,
     opacity: 0,
-    duration: 2,
+    duration: 1,
+    // ease: "back.out(1)",
+    delay: 0.1,
+  })
+  .from(".hero-subheading", {   // assuming your p has class "hero-subheading"
+    // x: 500,
+    opacity: 0,
+    duration: 3,
+    ease: "back.out(1)",
+    // delay: 0.3,
 
-  },"-=0.1") // starts this animation 1.5 seconds before the previous one ends;
+  },"-=0") // starts this animation 1.5 seconds before the previous one ends;
 });
