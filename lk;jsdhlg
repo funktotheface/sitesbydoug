@@ -1,0 +1,27 @@
+Function Code:
+    ---------------
+    gsap.to(animatedText, {
+        scrollTrigger: {
+          trigger: animatedText,
+          start: "top 85%",
+          end: "top 35%",
+          scrub: true,
+        },
+        textShadow: "6px 6px 10px rgba(255, 0, 0, 0.8), -6px -6px 10px rgba(0, 226, 57, 0.8)",
+        opacity: 1,
+        repeat: -1,
+        repeatDelay: 0.2,
+        duration: 0.1,
+        yoyo: true,
+      });
+
+    HTML Code:
+    ---------------
+    <section class="container-fluid vh-100 d-flex align-items-center justify-content-center position-relative effect-section" data-effect="glitch-effect">
+          <button class="btn btn-light position-absolute top-0 end-0 m-3 copy-btn">Copy Code</button>
+          <div class="row w-100">
+            <div class="col-12 text-center">
+              <h1 class="animated-text" style="opacity: 1; text-shadow: none;">Glitch Effect</h1>
+            </div>
+          </div>
+        </section>
