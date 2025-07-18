@@ -3,14 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // GSAP Animations (as before)
   const tl = gsap.timeline();
 
-  tl
-
+tl
   .from(".hero-subheading", {
     opacity: 0,
     duration: 2,
     delay: 1.5,
     ease: "back.out(1)",
-  });
+  })
+  .from(".slider", {
+    opacity: 0,
+    duration: 2,
+    ease: "back.out(1)",
+  }, "<"); // "<" starts it at the same time as previous
 
   
   const heroSpan = document.querySelector('.hero-heading span');
@@ -18,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLogo = document.getElementById('navLogo');
   const navLinks = document.querySelectorAll('.nav-link');
   const heroBg = document.querySelector('.hero-bg'); // assuming this holds the image
+  const hexBg = document.getElementById('hexbg');
 
   let hue = 0;
   const hueStep = 2;         // change per frame
@@ -33,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (navLogo) navLogo.style.filter = hueRotateValue;
     navLinks.forEach(link => link.style.filter = hueRotateValue);
     if (heroBg) heroBg.style.filter = hueRotateValue;
+    if (hexBg) hexBg.style.filter = hueRotateValue;
 
     hue += hueStep;
 
@@ -50,12 +56,31 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       if (navLogo) navLogo.style.filter = '';
       navLinks.forEach(link => link.style.filter = '');
-      if (heroBg) {
-        // Clear hue and fade out
-        heroBg.style.filter = '';
-        heroBg.style.transition = 'opacity 1s ease';
-        heroBg.style.opacity = '0';
-      }
+      // Uncomment if you want to fade out the hero background
+      // if (heroBg) {
+      //   // Clear hue and fade out
+      //   heroBg.style.filter = '';
+      //   heroBg.style.transition = 'opacity 1s ease';
+      //   heroBg.style.opacity = '0';
+      // }
     }
+
+    const hueSlider = document.getElementById('hueSlider');
+
+if (hueSlider) {
+  hueSlider.addEventListener('input', (e) => {
+    const sliderHue = parseInt(e.target.value);
+    const hueRotateValue = `hue-rotate(${sliderHue}deg)`;
+
+    // Apply slider hue filter independently
+    if (heroSpan) heroSpan.style.filter = hueRotateValue;
+    if (heroButton) heroButton.style.filter = hueRotateValue;
+    if (navLogo) navLogo.style.filter = hueRotateValue;
+    navLinks.forEach(link => link.style.filter = hueRotateValue);
+    if (heroBg) heroBg.style.filter = hueRotateValue;
+    if (hexBg) hexBg.style.filter = hueRotateValue;
+  });
+}
+
   }, animationSpeed);
 });

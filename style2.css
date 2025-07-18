@@ -3,78 +3,56 @@
   --uranian-blue: #acdef5;
   --linen: #efe8e0;
   --black: #030101;
-  --animBase: #FFC42A;
+  --animBase: #af8720;
 
   /* Gradients */
-  --gradient-top: linear-gradient(
-    0deg,
-    var(--uranian-blue),
-    var(--linen),
-    var(--black)
-  );
-  --gradient-right: linear-gradient(
-    90deg,
-    var(--uranian-blue),
-    var(--linen),
-    var(--black)
-  );
-  --gradient-bottom: linear-gradient(
-    180deg,
-    var(--uranian-blue),
-    var(--linen),
-    var(--black)
-  );
-  --gradient-left: linear-gradient(
-    270deg,
-    var(--uranian-blue),
-    var(--linen),
-    var(--black)
-  );
+  --gradient-top: linear-gradient(0deg,
+      var(--uranian-blue),
+      var(--linen),
+      var(--black));
+  --gradient-right: linear-gradient(90deg,
+      var(--uranian-blue),
+      var(--linen),
+      var(--black));
+  --gradient-bottom: linear-gradient(180deg,
+      var(--uranian-blue),
+      var(--linen),
+      var(--black));
+  --gradient-left: linear-gradient(270deg,
+      var(--uranian-blue),
+      var(--linen),
+      var(--black));
 
-  --gradient-top-right: linear-gradient(
-    45deg,
-    var(--uranian-blue),
-    var(--linen),
-    var(--black)
-  );
-  --gradient-bottom-right: linear-gradient(
-    135deg,
-    var(--uranian-blue),
-    var(--linen),
-    var(--black)
-  );
-  --gradient-top-left: linear-gradient(
-    225deg,
-    var(--uranian-blue),
-    var(--linen),
-    var(--black)
-  );
-  --gradient-bottom-left: linear-gradient(
-    315deg,
-    var(--uranian-blue),
-    var(--linen),
-    var(--black)
-  );
+  --gradient-top-right: linear-gradient(45deg,
+      var(--uranian-blue),
+      var(--linen),
+      var(--black));
+  --gradient-bottom-right: linear-gradient(135deg,
+      var(--uranian-blue),
+      var(--linen),
+      var(--black));
+  --gradient-top-left: linear-gradient(225deg,
+      var(--uranian-blue),
+      var(--linen),
+      var(--black));
+  --gradient-bottom-left: linear-gradient(315deg,
+      var(--uranian-blue),
+      var(--linen),
+      var(--black));
 
-  --gradient-radial: radial-gradient(
-    var(--uranian-blue),
-    var(--linen),
-    var(--black)
-  );
-
-  
-
+  --gradient-radial: radial-gradient(var(--uranian-blue),
+      var(--linen),
+      var(--black));
 }
 
 .flyRight {
   opacity: 0;
-  
 }
 
 .flyLeft {
   opacity: 0;
-  
 }
+
 body {
   background-color: var(--black);
 }
@@ -93,18 +71,20 @@ body {
   font-family: "iknowaghost";
   src: url("Fonts/iknowaghost/iknowaghost.ttf") format("truetype");
 }
+
 /* Make sure the navbar sits on top of hero image */
 nav.navbar {
   z-index: 2;
-  font-family: "Quicksand", sans-serif; /* Use a modern sans-serif font */
+  font-family: "Quicksand", sans-serif;
+  /* Use a modern sans-serif font */
 }
 
 /* Optional: Add slight blur + tint */
 nav {
-  background-color: #acdef517; /* Semi-transparent background */
+  background-color: #acdef517;
+  /* Semi-transparent background */
   backdrop-filter: blur(10px);
 }
-
 
 #navLogo {
   color: var(--animBase);
@@ -153,13 +133,12 @@ nav {
   font-family: quicksand, sans-serif;
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 9999px;
   border: var(--linen) 1px solid;
   transition: background-color 0.5s ease;
   transition: border 0.5s ease;
   transition: color 0.5s ease;
 }
-
 
 #navCTA:hover,
 #formSubmit:hover {
@@ -169,7 +148,8 @@ nav {
 }
 
 body {
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
+  /* Prevent horizontal scroll */
 }
 
 /* 1. Basic reset for consistent sizing */
@@ -184,10 +164,12 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 100vh; /* allows hero to grow taller if needed */
+  min-height: 100vh;
+  /* allows hero to grow taller if needed */
   overflow: hidden;
   display: flex;
-  justify-content: space-between; /* left + right columns */
+  justify-content: space-between;
+  /* left + right columns */
 }
 
 /* 3. Background image (swap the URL) */
@@ -196,48 +178,48 @@ body {
   position: absolute;
   inset: 0;
   background: url("Assets/Media/Images/n2.png") center / cover no-repeat;
-  z-index: -2; /* keeps it behind everything */
+  z-index: -2;
+  /* keeps it behind everything */
 }
 
-
 .hero-bg {
-  will-change: filter; /* optimize for animation */
+  will-change: filter;
+  /* optimize for animation */
   position: absolute;
   inset: 0;
   background: url("Assets/Media/Images/gold-face-overlay.png") center / cover no-repeat;
   z-index: -2;
-  
-
-
 }
-
 
 /* 4. Optional dim / colour overlay */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0); /* set your own overlay colour / opacity */
+  background: rgba(0, 0, 0, 0);
+  /* set your own overlay colour / opacity */
   z-index: -1;
 }
 
 /* 5. Side columns */
 .side {
-  flex: 0 0 50%; /* each side ~30 % width on desktop */
+  flex: 0 0 50%;
+  /* each side ~30 % width on desktop */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* three slots spaced vertically */
+  justify-content: space-between;
+  /* three slots spaced vertically */
   padding: 2rem;
 }
 
 /* 6. Individual slots (blank for now) */
 .slot {
-  flex: 1 1 0; /* equal heights */
+  flex: 1 1 0;
+  /* equal heights */
   display: flex;
   align-items: center;
   justify-content: flex-start;
   /* Add min‑height / padding / borders etc. when you customise */
 }
-
 
 .side-left .slot-1 h1 {
   /* padding-top: 3rem; */
@@ -249,10 +231,10 @@ body {
   padding-left: 5rem;
 }
 
-
 .side-left .slot-2 {
   justify-content: center;
 }
+
 .side-left .slot-2 p {
   font-family: "iknowaghost", sans-serif;
   font-size: 3rem;
@@ -267,30 +249,26 @@ body {
   padding-left: 5rem;
 }
 
-
-#heroButton{
+#heroButton {
   /* background-color: var(--linen); */
   color: var(--animBase);
   font-family: quicksand, sans-serif;
   font-size: 3rem;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 999px;
   border: var(--animBase) 1px solid;
   transition: background-color 0.5s ease;
   transition: border 0.5s ease;
   transition: color 0.5s ease;
-  
+
   transition: font-size 0.3s ease;
 }
 
-
 #heroButton:hover {
-    /* background-color: #acdef517; Semi-transparent background */
+  /* background-color: #acdef517; Semi-transparent background */
   backdrop-filter: blur(10px);
   color: var(--animBase);
   font-size: 3.5rem;
-  
-
 }
 
 .side-right .slot-2 {
@@ -314,7 +292,8 @@ body {
 
 #heroForm {
   width: 100%;
-  max-width: 600px; /* limit width on larger screens */
+  max-width: 600px;
+  /* limit width on larger screens */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -326,9 +305,7 @@ body {
   font-weight: 600;
   font-size: 2rem;
   color: var(--linen);
-  
 }
-
 
 #heroForm label {
   color: var(--linen);
@@ -353,25 +330,65 @@ body {
 #heroForm input::placeholder,
 #heroForm textarea::placeholder,
 #heroForm select::placeholder {
-  color: rgba(239, 232, 224, 0.6); /* faded version of --linen */
-  font-style: italic; /* optional */
+  color: rgba(239, 232, 224, 0.6);
+  /* faded version of --linen */
+  font-style: italic;
+  /* optional */
 }
+
 .content1 {
   position: relative;
   width: 100%;
-  min-height: 100vh; /* allows hero to grow taller if needed */
+  min-height: 100vh;
+  /* allows hero to grow taller if needed */
   overflow: hidden;
   display: flex;
-  justify-content: space-between; /* left + right columns */
+  justify-content: space-between;
+  /* left + right columns */
 }
+
 
 .content1::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("Assets/Media/Images/gold-face.png") center / cover no-repeat;
-  filter: brightness(200%);
-  z-index: -2; /* keeps it behind everything */
+ 
+
+  z-index: -3;
+  /* keeps it behind everything */
+}
+
+#hexbg-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -2;
+  pointer-events: none;
+}
+
+#hexbg {
+  position: absolute;
+  width: 150vmax; /* make it super large, square, and scalable */
+  height: 150vmax;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.15;
+  display: block;
+  color: var(--animBase);
+  animation: rotateZoom 250s linear infinite;
+  transform-origin: center;
+}
+
+
+
+@keyframes rotateZoom {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 #colorCanvas {
@@ -384,7 +401,6 @@ body {
 }
 
 .content1 .side-left .slot-1 h1 {
-  
   font-family: "coolvetica", sans-serif;
   text-align: right;
   font-size: 7rem;
@@ -395,12 +411,10 @@ body {
 }
 
 .content1 .side-left .slot-1 h1 span {
-  color: #FFC42A;
-  }
-
+  color: var(--animBase);
+}
 
 .content1 .side-left .slot-2 {
-
   justify-content: center;
 }
 
@@ -411,7 +425,6 @@ body {
   color: var(--linen);
   text-decoration: none;
   /* padding-bottom: 125px; */
-  
 }
 
 .content1 .side-left .slot-3 {
@@ -420,17 +433,61 @@ body {
   align-items: flex-end;
   justify-content: start;
   width: 100%;
+}
 
+.content1 .side-right .slot-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  padding-right: 5rem;
+  /* margin-left: 15rem; */
 }
 
 
+#hueSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 300px;
+  height: 10px;
+  background: linear-gradient(to right, #ff0000, #ff00ff, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);
+;
+  border-radius: 999px;
+  outline: none;
+  
+
+}
+
+/* WebKit (Chrome, Safari, Edge) */
+#hueSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: rgb(255, 255, 255);
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Firefox */
+#hueSlider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
 
 /* 7. Mobile layout (≤ 768 px) – stacks columns */
 @media (max-width: 768px) {
+  .mobile-break {
+    display: none;
+    /* Hide on larger screens */
+  }
 
-    .mobile-break {
-    display: none; /* Hide on larger screens */
-    }
   #navLogo {
     font-size: 1.8rem;
   }
@@ -442,29 +499,28 @@ body {
 
   .side-left .slot-1 h1 {
     /* padding-top: 70%; Adjust padding for mobile */
-    padding-bottom:0%;
+    padding-bottom: 0%;
     padding-left: 0%;
     font-size: 5rem;
     padding-top: 15%;
   }
 
-  .side-left .slot-2 p{
+  .side-left .slot-2 p {
     padding-left: 0%;
   }
 
   .side-right .slot-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding-right: 0rem;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-right: 0rem;
+  }
 
   #heroButton {
     font-size: 2rem;
   }
-  
 
   .side {
     flex: 1 1 0;
@@ -472,13 +528,12 @@ body {
   }
 
   /* Optional: stack slots tighter on mobile */
-  .slot + .slot {
+  .slot+.slot {
     margin-top: 1rem;
   }
 
   #heroForm {
-    display: none !important; /* Hide form on mobile */
+    display: none !important;
+    /* Hide form on mobile */
   }
 }
-
-
