@@ -108,7 +108,7 @@ nav {
 .nav-link {
   /* color: var(--linen); */
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.75rem;
   /* background-color: #03010162; */
   padding-inline: 5px;
   border-radius: 5px;
@@ -177,7 +177,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("Assets/Media/Images/n2.png") center / cover no-repeat;
+  background: url("Assets/Media/Images/n2.webp") center / cover no-repeat;
   z-index: -2;
   /* keeps it behind everything */
 }
@@ -187,7 +187,7 @@ body {
   /* optimize for animation */
   position: absolute;
   inset: 0;
-  background: url("Assets/Media/Images/gold-face-overlay.png") center / cover no-repeat;
+  background: url("Assets/Media/Images/gold-face-overlay.webp") center / cover no-repeat;
   z-index: -2;
 }
 
@@ -249,6 +249,24 @@ body {
   padding-left: 5rem;
 }
 
+.HeroList{
+    font-family: "Quicksand", sans-serif;
+  font-size: 2.5rem;
+  color: var(--linen);
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  padding-top: 125px;
+  /* display: none; */
+}
+
+.contentSpan {
+  /* visibility: hidden; */
+}
+
+.content {
+  color: var(--animBase);
+}
+
 #heroButton {
   /* background-color: var(--linen); */
   color: var(--animBase);
@@ -266,8 +284,7 @@ body {
 
 #heroButton:hover {
   /* background-color: #acdef517; Semi-transparent background */
-  backdrop-filter: blur(10px);
-  color: var(--animBase);
+  backdrop-filter: blur(2px);
   font-size: 3.5rem;
 }
 

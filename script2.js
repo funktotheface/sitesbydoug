@@ -1,20 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // GSAP Animations (as before)
+  gsap.registerPlugin(TextPlugin);
   const tl = gsap.timeline();
 
 tl
   .from(".hero-subheading", {
     opacity: 0,
+    x: -100,
     duration: 2,
-    delay: 1.5,
+    delay: 2,
     ease: "back.out(1)",
   })
+  .from(".HeroList", {
+    opacity: 0,
+    x: 100,
+    duration: 2,
+    ease: "back.out(1)",
+    
+  }, "<")
   .from(".slider", {
     opacity: 0,
     duration: 2,
     ease: "back.out(1)",
-  }, "<"); // "<" starts it at the same time as previous
+  }, "<")
+  
+  .from(".contentSpan", {
+    opacity: 0,
+    duration: 2,
+    ease: "back.out(1)",
+  }); // "<" starts it at the same time as previous
 
   
   const heroSpan = document.querySelector('.hero-heading span');
@@ -23,6 +38,8 @@ tl
   const navLinks = document.querySelectorAll('.nav-link');
   const heroBg = document.querySelector('.hero-bg'); // assuming this holds the image
   const hexBg = document.getElementById('hexbg');
+  const content = document.querySelectorAll('.content');
+  const HeroList = document.querySelector('.HeroList');
 
   let hue = 0;
   const hueStep = 2;         // change per frame
@@ -39,6 +56,8 @@ tl
     navLinks.forEach(link => link.style.filter = hueRotateValue);
     if (heroBg) heroBg.style.filter = hueRotateValue;
     if (hexBg) hexBg.style.filter = hueRotateValue;
+    content.forEach(el => el.style.filter = hueRotateValue);
+;
 
     hue += hueStep;
 
@@ -57,12 +76,18 @@ tl
       if (navLogo) navLogo.style.filter = '';
       navLinks.forEach(link => link.style.filter = '');
       // Uncomment if you want to fade out the hero background
-      // if (heroBg) {
-      //   // Clear hue and fade out
-      //   heroBg.style.filter = '';
-      //   heroBg.style.transition = 'opacity 1s ease';
-      //   heroBg.style.opacity = '0';
-      // }
+
+      if (heroBg) {
+        // Clear hue and fade out
+        heroBg.style.filter = '';
+        heroBg.style.transition = 'opacity 2s ease';
+        heroBg.style.opacity = '0';
+
+        // heroBg.addEventListener('transitionend', () => {
+        //   HeroList.style.display = 'block';
+        // }, { once: true });
+       
+      }
     }
 
     const hueSlider = document.getElementById('hueSlider');
@@ -79,6 +104,7 @@ if (hueSlider) {
     navLinks.forEach(link => link.style.filter = hueRotateValue);
     if (heroBg) heroBg.style.filter = hueRotateValue;
     if (hexBg) hexBg.style.filter = hueRotateValue;
+    content.forEach(el => el.style.filter = hueRotateValue);
   });
 }
 
